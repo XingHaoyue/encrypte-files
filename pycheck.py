@@ -53,9 +53,9 @@ class CheckBar(QWidget):
         if fileName:
             self.file1.setText(fileName)
             self.file_path1 = fileName
-        self.HASH1 = AllMethods.get_file_hash(self.file_path1)
-        self.file1.append("文件哈希值为：")
-        self.file1.append(self.HASH1)
+            self.HASH1 = AllMethods.get_file_hash(self.file_path1)
+            self.file1.append("文件哈希值为：")
+            self.file1.append(self.HASH1)
     def generate_file2(self):
         options = QFileDialog.Options()
         options |= QFileDialog.DontUseNativeDialog
@@ -63,9 +63,9 @@ class CheckBar(QWidget):
         if fileName:
             self.file2.setText(fileName)
             self.file_path2 = fileName
-        self.HASH2 = AllMethods.get_file_hash(self.file_path2)
-        self.file2.append("文件哈希值为：")
-        self.file2.append(self.HASH2)
+            self.HASH2 = AllMethods.get_file_hash(self.file_path2)
+            self.file2.append("文件哈希值为：")
+            self.file2.append(self.HASH2)
 
     def check_file(self):
         if self.HASH1 == self.HASH2:
